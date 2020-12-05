@@ -1,2 +1,2 @@
-# smart-glass back end
+# smart-glass 
 zero to mastery final project
