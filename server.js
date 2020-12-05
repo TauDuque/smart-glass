@@ -10,13 +10,13 @@ const Profile = require('./controllers/Profile');
 const Image = require('./controllers/Image');
 
 const db = knex({
-    client: 'pg',
-    connection: {
-      host : 'postgresql-graceful-56196',
-      user : 'postgres',
-      password : '5@0p4ul0',
-      database : 'smart-glass'
+  client: 'pg',
+  connection: {
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false
     }
+  }
 });
 
 db.select('*').from('users');
