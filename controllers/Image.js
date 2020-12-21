@@ -6,7 +6,7 @@ const app = new Clarifai.App({
 
 const handleApiCall = (req, res) => {
     app.models.predict(
-    "d02b4508df58432fbb84e800597b8959", 
+    "api key no bloco de notas", 
     req.body.input)
     .then(data => {
         res.json(data);
